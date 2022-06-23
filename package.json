@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Twilio Account Switcher",
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "build": "cd src && zip -r ../dist/extension.zip *"
   },
   "repository": {
     "type": "git",
