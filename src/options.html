@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="output.css">
+  </head>
+  <body>
+    <div class="container min-w-max m-4 h-screen">
+      <div><button class="btn btn-primary" id="btnSave">Save</button></div>
+      <div id="alertError" class="alert alert-error shadow-lg hidden"></div>
+      <div>Format: Lines of (Account label), (account SID)</div>
+      <div class="font-mono bg-base-200 p-4 rounded-lg">
+        Account Name,ACdeabf68fc8f3ae75c86d628db5146022<br />
+        Account Name2,ACdeabf68fc8f3ae75c86d628db5146023<br />
+      </div>
+        <textarea class="textarea textarea-bordered w-full h-full" spellcheck="false" id="textTwilioAccounts" placeholder="Account Name,ACdeabf68fc8f3ae75c86d628db5146022"></textarea>
+    </div>
+    <script src="options.js"></script>
+  </body>
+</html>
