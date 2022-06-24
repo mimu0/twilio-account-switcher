@@ -1,6 +1,6 @@
 {
   "name": "twilio-account-switcher",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Twilio Account Switcher",
   "scripts": {
     "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",

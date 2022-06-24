@@ -76,12 +76,3 @@ const runSwitchAccount = async (accountSid) => {
     console.error(e);
   }
 };
-
-/*
-preprod,ACf1416ae213f97f1dc6a381ccfef230ae
-production,AC94052e3911d77dee229fa8c03a6022ba
-stg01-ujetautosmokeminiprd01,ACd5197fe69122497f057e3bb132bb3881
-stg01-annmur,AC6cdb1dac0b06a3132b4f5af7366bb27a
-
-https://www.twilio.com/console/api/navigation/rpc?name=currentAccountSet&args={"currentAccountSid":"ACf1416ae213f97f1dc6a381ccfef230ae"}
-*/
