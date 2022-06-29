@@ -1,6 +1,8 @@
 let changeColor = document.getElementById("changeColor");
 const selectTwilioAccounts = document.getElementById("selectTwilioAccounts");
+const textAccountSid = document.getElementById("textAccountSid");
 const btnSwitch = document.getElementById("btnSwitch");
+const btnGo = document.getElementById("btnGo");
 
 chrome.storage.sync.get("twilioAccounts", ({ twilioAccounts }) => {
   if (!twilioAccounts) {
@@ -20,6 +22,19 @@ chrome.storage.sync.get("twilioAccounts", ({ twilioAccounts }) => {
 
 btnSwitch.addEventListener("click", async () => {
   const accountSid = selectTwilioAccounts.value;
+  await switchAccount(accountSid);
+});
+
+btnGo.addEventListener("click", async () => {
+  const accountSid = textAccountSid.value;
+  await switchAccount(accountSid);
+});
+
+const switchAccount = async (accountSid) => {
+  if (!accountSid) {
+    return;
+  }
+
   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
   if (!tab.url?.includes("https://console.twilio.com")) {
@@ -32,7 +47,7 @@ btnSwitch.addEventListener("click", async () => {
     args: [accountSid],
     func: runSwitchAccount,
   });
-});
+};
 
 /*
 This function will run on other browser context

@@ -10,8 +10,14 @@
     <body>
       <div class="container min-w-max p-4">
         <h1 class="text-lg font-bold mb-4">Twilio Account Switcher</h1>
-        <select class="select select-bordered w-full  mb-4" id="selectTwilioAccounts"></select>
-        <button class="btn btn-primary" id="btnSwitch">Switch</button>
+        <div class="flex">
+          <select class="select select-bordered w-72 mb-4 flex-auto mr-4" id="selectTwilioAccounts"></select>
+          <button class="btn btn-primary flex-auto" id="btnSwitch">Switch</button>
+        </div>
+        <div class="flex">
+          <input type="text" class="input input-bordered w-full min-w-md max-w-xs flex-auto mr-4" id="textAccountSid" />
+          <button class="btn btn-primary flex-auto" id="btnGo">Go</button>
+        </div>
         <script src="popup.js"></script>
       </div>
     </body>
